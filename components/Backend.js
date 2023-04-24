@@ -1,9 +1,9 @@
 import { Platform, TouchableOpacity, TouchableWithoutFeedback, Text, Linking, Alert } from 'react-native';
 import GetLocation from 'react-native-get-location';
+import RNImmediatePhoneCall from 'react-native-immediate-phone-call';
 
 const handleCallPress = (phoneNumbers) => {
-    const phoneUrl = Platform.OS === 'ios' ? `telprompt:${phoneNumbers[0]}` : `tel:${phoneNumbers[0]}`;
-    Linking.openURL(phoneUrl);
+  RNImmediatePhoneCall.immediatePhoneCall(phoneNumbers[0]);
 };
 
 const handleTextPress = async (phoneNumbers) => {
