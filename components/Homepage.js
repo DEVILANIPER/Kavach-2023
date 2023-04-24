@@ -8,6 +8,7 @@ import { StyleSheet,
     } from 'react-native'
   import React from 'react'
   import { useState } from 'react';
+import { handleCallPress } from './Backend';
 
 
 
@@ -69,7 +70,7 @@ import { StyleSheet,
     
       
     <TouchableOpacity 
-    onPress={() => Alert.alert('Button with adjusted color pressed')}>
+    onPress={() => handleCallPress(['+917982841013'])}>
     
     <View style={{position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center'}}>
     
