@@ -8,7 +8,7 @@ import { StyleSheet,
     } from 'react-native'
   import React from 'react'
   import { useState } from 'react';
-import { handleCallPress } from './Backend';
+import { handleCallPress, handleTextPress } from './Backend';
 
 
 
@@ -53,10 +53,10 @@ import { handleCallPress } from './Backend';
     
     <View>
       <TouchableOpacity 
-    onPress={() => Alert.alert('Button with adjusted color pressed')}>
+    onPress={() => handleTextPress(['+917982841013','+918920276362'])}>
         <Image source={require('./assets/L2.png')}   style={styles.btn_img}/>
     </TouchableOpacity>
-    <Text> Track my location</Text>
+    <Text> Send my location</Text>
     </View>
     <View>
       <TouchableOpacity 
