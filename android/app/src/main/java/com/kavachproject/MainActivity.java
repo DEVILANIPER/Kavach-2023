@@ -35,6 +35,12 @@ public class MainActivity extends ReactActivity {
     return new MainActivityDelegate(this, getMainComponentName());
   }
 
+  @Override
+  public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+      RNImmediatePhoneCallPackage.onRequestPermissionsResult(requestCode, permissions, grantResults); // very important event callback
+      super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+  }
+
   public static class MainActivityDelegate extends ReactActivityDelegate {
     public MainActivityDelegate(ReactActivity activity, String mainComponentName) {
       super(activity, mainComponentName);
